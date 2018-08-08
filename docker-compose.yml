@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  app:
+    image: hardware/rainloop
+    container_name: rainloop
+    restart: always
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./conf:/rainloop/data
