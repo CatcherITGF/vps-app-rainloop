@@ -5,7 +5,12 @@ services:
     image: hardware/rainloop
     container_name: rainloop
     restart: always
-    ports:
-      - "8888:8888"
+    # ports:
+    #   - "8888:8888"
     volumes:
       - ./conf:/rainloop/data
+
+networks:
+  default:
+    external:
+      name: nginx
